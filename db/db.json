@@ -1,31 +1,21 @@
-   { "notes": [
-      {
-        "title": "Test Title",
-        "text": "Test text"
-      },
-      {
-        "title": "new note",
-        "text": "note text"
-      },
-      {
-        "title": "another new note",
-        "text": "more note text"
-      },
-      {
-        "title": "note",
-        "text": "this is my note. it's a test."
-      },
-      {
-        "title": "lorem",
-        "text": "ipsum"
-      },
-      {
-        "title": "sample",
-        "text": "i've written a bunch of sample notes. this is one of them."
-      },
-      {
-        "title": "testing",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean interdum ultricies enim eget dapibus. Fusce tristique sollicitudin enim ut tincidunt. Sed pretium nunc nibh, eget aliquet mauris bibendum et. Sed sed nibh quis dolor pellentesque dictum nec id magna. Vivamus erat metus, euismod eget mi id, pretium porttitor lectus. Cras lacinia aliquet sodales. Morbi non elit metus. Mauris tincidunt gravida massa, ut egestas nulla pellentesque sed. Sed semper sodales mauris, non luctus nunc tempor non. Nullam luctus efficitur felis eu porta. Fusce egestas eros nibh, in viverra ipsum varius eu. Integer maximus, nisl ac fermentum suscipit, dui nisl aliquet arcu, quis tempor neque elit in enim. Nunc porta mollis tincidunt. Nam varius lorem et sodales ultrices. Cras et iaculis massa. Duis elementum neque at tortor aliquet dictum."
-      }
-    ]
-  }
+{
+  "notes": [
+    {
+      "title": "Test Title",
+      "text": "Test text"
+    },
+    {
+      "title": "new note",
+      "text": "note text"
+    },
+    {
+      "title": "lorem",
+      "text": "ipsum"
+    },
+    {
+      "title": "testing",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean interdum ultricies enim eget dapibus."
+    }
+  ]
+
+}
