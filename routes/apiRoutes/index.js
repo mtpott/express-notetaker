@@ -1,6 +1,3 @@
-// GIVEN a note-taking application
-// WHEN I open the Note Taker
-// THEN I am presented with a landing page with a link to a notes page
 // WHEN I click on the link to the notes page
 // THEN I am presented with a page with existing notes listed in the left-hand column, plus empty fields to enter a new note title and the note’s text in the right-hand column
 // WHEN I enter a new note title and the note’s text
@@ -13,3 +10,35 @@
 // THEN I am presented with empty fields to enter a new note title and the note’s text in the right-hand column
 
 const router = require('express').Router();
+const { filterByQuery, findByTitle, addNote } = require('../../lib/notes');
+const { notes } = require('../../db/db.json');
+
+router.get('/notes', (req, res) => {
+    let result = notes;
+    
+    if(req.query) {
+        result = filterByQuery(req.query, result);
+    }
+    res.json(result);
+});
+
+router.get('/notes/:title', (req, res) => {
+    const result = findByTitle(req.params.title, notes);
+    if (result) {
+        res.json(result);
+    } else {
+        res.send(404);
+    }
+})
+
+router.post('/notes', (req, res) => {
+    req.body.title = notes.length.toString();
+
+    console.log(req.body);
+
+    const note = addNote(req.body, notes);
+
+    res.json(req.body);
+});
+
+module.exports = router;
