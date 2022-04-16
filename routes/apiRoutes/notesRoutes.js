@@ -1,30 +1,30 @@
 const router = require('express').Router();
-//const { filterByQuery, newNote, addNote } = require('../../lib/notes');
-const { addNote } = require('../../lib/notes');
-const notes = require('../../db/db.json');
+//const { filterByQuery, createNote, validateNote } = require('../../lib/notes');
+const { createNote, validateNote } = require('../../lib/notes');
+const { notes } = require('../../db/db');
 
 router.get('/notes', (req, res) => {
     let result = notes;
+    console.log(result);
     
-    console.log('this get request worked');
-    // if(req.query) {
-    //     result = filterByQuery(req.query, result);
-    // }
     res.json(result);
+
 });
 
+// router.get('/notes', (req, res) => {
+
+//     res.json(req.body);
+// })
+
 router.post('/notes', (req, res) => {
-    req.body = notes.length;
+    req.body.id = notes.length.toString();
 
-    //req.body = notes;
-
-    console.log('this post request worked');
-
-    //console.log(notes);
-
-    //const note = addNote(req.body, notes);
-
-    res.json(req.body);
+    if(!validateNote(req.body)) {
+        res.status(400).send('this note is not properly formatted.');
+    } else {
+        const newNote = createNote(req.body, notes);
+        res.json(req.body);
+    }
 });
 
 module.exports = router;
