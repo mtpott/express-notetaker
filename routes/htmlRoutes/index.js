@@ -1,6 +1,7 @@
 const path = require('path');
 const router = require('express').Router();
 
+//html routes so html functionality appears
 router.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '../../public/index.html'));
 });
