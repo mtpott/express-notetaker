@@ -48,6 +48,13 @@ const deleteNote = (id) =>
     headers: {
       'Content-Type': 'application/json',
     },
+  })
+  .then(res => {
+    if (res.ok) {
+      console.log('successfully deleted.');
+    } else {
+      console.log('delete unsuccessful.');
+    }
   });
 
 const renderActiveNote = () => {
