@@ -1,3 +1,4 @@
+//router is necessary when using app.express! this ensures we are using the same 'app' in every file we create in this project
 const router = require('express').Router();
 const { createNote, validateNote, findById } = require('../../lib/notes');
 const { notes } = require('../../db/db');
