@@ -49,11 +49,12 @@ const deleteNote = (id) =>
       'Content-Type': 'application/json',
     },
   })
+  //if the delete request is able to find the correct id, delete the selected note and console log the success statement. if unsuccessfully found, send a 404 error.
   .then(res => {
     if (res.ok) {
       console.log('successfully deleted.');
     } else {
-      console.log('delete unsuccessful.');
+      res.send(404);
     }
   });
 

@@ -1,7 +1,6 @@
 const router = require('express').Router();
-const { createNote, validateNote } = require('../../lib/notes');
+const { createNote, validateNote, findById } = require('../../lib/notes');
 const { notes } = require('../../db/db');
-
 
 //get request--result shows the full notes array, which then appears as text on the client's side.
 router.get('/notes', (req, res) => {
@@ -18,6 +17,17 @@ router.post('/notes', (req, res) => {
     } else {
         const newNote = createNote(req.body, notes);
         res.json(req.body);
+    }
+});
+
+//delete request--when the user clicks the trash can icon, the note should successfully delete and disappear from the list on the left of the screen. the delete request uses the findById function in order to find the correct note. if it can't find the note with the corresponding id, it will send a 404 error. 
+router.delete ('/notes/:id', (req, res) => {
+    const result = findById(req.params.id, notes);
+    if (!result) {
+        res.status(404);
+    } else {
+        console.log(req.params.id);
+        res.json(req.params.id);
     }
 });
 
