@@ -2,9 +2,13 @@
 
 ## Table of Contents
 ### -[Installation](#installation)
-### -[Screenshot] (#screenshot)
 ### -[Technologies](#technologies)
 ### -[Questions](#questions)
+
+![project-final-image](./assets/images/note-taker.png)
+
+## Link
+Link to the final deployed application: https://cryptic-crag-74579.herokuapp.com/
 
 ## Description
 In this project, our task was to connect the already existing front-end to the back-end that we created for a note-taking application. Using Express.js, the user should be able to click on the "take notes" button at "index.html" page and connect to "notes.html", where they are able to write and save notes to the page. I was able to do this by creating GET and POST requests! The GET request to '/notes' returns the 'notes.html' file, while the POST request to '/notes' receives input from the user, adds it to the db.json file, and shows it to the user on the left side of the screen.
@@ -18,13 +22,6 @@ addendum: We were given a bonus as well, to be able to delete notes that appear 
 ## Installation
 ### Instructions for Project Installation:
 To ensure this works as expected, please install Express before attempting to run this code.
-
-## Screenshot
-![project-final-image](./assets/images/note-taker.png)
-
-## Link
-
-Link to the final deployed application: https://cryptic-crag-74579.herokuapp.com/
 
 ## Technologies
 ### Built With:
