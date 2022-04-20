@@ -2,6 +2,7 @@
 
 ## Table of Contents
 ### -[Installation](#installation)
+### -[Screenshot] (#screenshot)
 ### -[Technologies](#technologies)
 ### -[Questions](#questions)
 
@@ -12,13 +13,19 @@ Inside of my POST request, the function validateNote is called; here, if req.bod
 
 Additionally--if you included '/api/notes' at the end of the URL, you can see the entire notes array!
 
-addendum: We were given a bonus as well, to be able to delete notes that appear on the left side of the screen. I tried to get it and wrote out the functionality for it, but the notes do not disappear from the left side of the screen. I went ahead and left all of this in. I do not anticipate receiving bonus credit for this work, but wanted to show that I tried!
-    Even though it didn't work quite as I expected it to, I used the findById function to access the id value of each note object in the note array. If it's unable to find the correct note, it sends a 404 error. 
+addendum: We were given a bonus as well, to be able to delete notes that appear on the left side of the screen. I tried to get it and wrote out the functionality for it, but the notes do not disappear from the left side of the screen. I went ahead and left all of this in. I do not anticipate receiving bonus credit for this work, but wanted to show that I tried! Even though it didn't work quite as I expected it to, I used the findById function to access the id value of each note object in the note array. If it's unable to find the correct note, it sends a 404 error. 
   
 ## Installation
 ### Instructions for Project Installation:
 To ensure this works as expected, please install Express before attempting to run this code.
-  
+
+## Screenshot
+![project-final-image](./assets/images/note-taker.png)
+
+## Link
+
+Link to the final deployed application: https://cryptic-crag-74579.herokuapp.com/
+
 ## Technologies
 ### Built With:
 This project is built using Express.js.
